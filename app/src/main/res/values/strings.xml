@@ -17,5 +17,20 @@
     <string name="string_trailer">Trailer</string>
     <string name="string_failed_loading_genres">Failed to refresh data locally</string>
     <string name="string_popular_movies">Popular movies</string>
+    <string name="string_coming_soon_movies">Up coming movies</string>
     <string name="string_content_adult">+18 Adult</string>
+    <string name="string_title_empty_movie">Failed to fetch</string>
+    <string name="string_message_empty_movie">Could not get the reference of the selected movie</string>
+    <string name="string_accept">Accept</string>
+    <string name="string_votes">Votes:</string>
+    <string name="string_cast_crew"><![CDATA[Actors & Production]]></string>
+    <string name="string_added_to_list">Added to list</string>
+    <string name="string_remove_from_list">Remove from list</string>
+    <string name="string_home_page">Home page</string>
+    <string name="url_not_found">Url home page not found</string>
+    <string name="string_top_rate_movies">Top rated movies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_title_coming_soon">Hi look at this</string>
+    <string name="string_coming_soon_message">The movies coming out soon are only available to watch online.</string>
 </resources>

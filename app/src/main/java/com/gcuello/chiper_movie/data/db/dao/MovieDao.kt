@@ -7,9 +7,13 @@ import com.gcuello.chiper_movie.data.db.entities.Movie
 @Dao
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(vararg args: Movie)
+    fun insert(vararg args: Movie)
 
     @Transaction
-    @Query("SELECT * FROM movies ORDER BY popularity DESC")
-    fun selectMovies(): DataSource.Factory<Int, Movie>
+    @Query("SELECT * FROM movies WHERE type =:type ORDER BY popularity DESC")
+    fun selectMovies(type: String): DataSource.Factory<Int, Movie>
+
+    @Transaction
+    @Query("SELECT * FROM movies WHERE title = :title")
+    fun selectByName(title: String): Movie
 }

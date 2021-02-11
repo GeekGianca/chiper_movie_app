@@ -1,9 +1,7 @@
 package com.gcuello.chiper_movie.data.db.entities
 
-import android.graphics.Bitmap
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "production_companies")
@@ -16,7 +14,5 @@ data class Company(
     @ColumnInfo(name = "name")
     var name: String?,
     @ColumnInfo(name = "origin_country")
-    var originCountry: String?,
-    @Ignore
-    var logoPicture: Bitmap?
+    var originCountry: String?
 )

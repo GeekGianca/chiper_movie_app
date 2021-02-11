@@ -1,8 +1,10 @@
 package com.gcuello.chiper_movie.presentation.ui.home.dashboard.adapters
 
+import android.app.Activity
 import android.content.Intent
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcuello.chiper_movie.R
@@ -31,8 +33,13 @@ class AdapterGroupMovieView(
                 when (item) {
                     is AdapterPopularMovieItem -> {
                         val intent = Intent(it.root.context, DetailActivity::class.java)
-                        intent.putExtra("movie_id", item.id)
-                        it.root.context.startActivity(intent)
+                        intent.putExtra("movie_id", item.movieItem.id)
+                        val extras = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            (viewBinding.root.context as Activity),
+                            item.binding.imageItem,
+                            "detail_image"
+                        )
+                        it.root.context.startActivity(intent, extras.toBundle())
                     }
                 }
             }

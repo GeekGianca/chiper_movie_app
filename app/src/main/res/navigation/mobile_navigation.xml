@@ -10,4 +10,9 @@
         android:name="com.gcuello.chiper_movie.presentation.ui.home.dashboard.DashboardFragment"
         tools:layout="@layout/fragment_dashboard" />
 
+    <fragment
+        android:id="@+id/nav_coming_soon"
+        android:name="com.gcuello.chiper_movie.presentation.ui.home.comingsoon.ComingSoonFragment"
+        tools:layout="@layout/fragment_coming_soon" />
+
 </navigation>

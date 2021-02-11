@@ -30,7 +30,5 @@ data class Crew(
     @ColumnInfo(name = "original_name")
     var originalName: String?,
     @ColumnInfo(name = "known_for_department")
-    var knownForDepartment: String?,
-    @Ignore
-    var profilePicture: Bitmap?
+    var knownForDepartment: String?
 )

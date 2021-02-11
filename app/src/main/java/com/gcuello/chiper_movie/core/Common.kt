@@ -3,7 +3,8 @@ package com.gcuello.chiper_movie.core
 object Common {
 
     var PAGE = 0
-    const val POST_PER_PAGE = 15
+    var PAGE_TOP_RATE = 0
+    const val POST_PER_PAGE = 50
     val PARAMS: MutableMap<String, String> = mutableMapOf()
 
     private var _baseUrl: String? = null

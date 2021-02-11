@@ -34,7 +34,5 @@ data class TvShow(
     @ColumnInfo(name = "first_air_date")
     var firstAirDate: String?,
     @ColumnInfo(name = "original_language")
-    var originalLanguage: String?,
-    @Ignore
-    var picture: Bitmap?
+    var originalLanguage: String?
 )

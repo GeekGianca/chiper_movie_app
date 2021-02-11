@@ -32,7 +32,5 @@ data class Cast(
     @ColumnInfo(name = "popularity")
     var popularity: Double?,
     @ColumnInfo(name = "profile_path")
-    var profilePath: String?,
-    @Ignore
-    var profilePicture: Bitmap?
+    var profilePath: String?
 )

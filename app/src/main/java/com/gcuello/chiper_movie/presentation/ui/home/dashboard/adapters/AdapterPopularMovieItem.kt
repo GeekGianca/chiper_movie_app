@@ -6,22 +6,27 @@ import com.gcuello.chiper_movie.data.db.entities.Movie
 import com.gcuello.chiper_movie.databinding.ItemMovieBinding
 import com.xwray.groupie.viewbinding.BindableItem
 
-class AdapterPopularMovieItem(val item: Movie) : BindableItem<ItemMovieBinding>() {
+class AdapterPopularMovieItem(val movieItem: Movie) : BindableItem<ItemMovieBinding>() {
+    private var _binding: ItemMovieBinding? = null
+    val binding get() = _binding!!
+
     override fun bind(viewBinding: ItemMovieBinding, position: Int) {
+        _binding = viewBinding
         val pathImage = String.format(
             "%s%s",
             viewBinding.root.context.getString(R.string.url_image_display),
-            item.posterPath
+            movieItem.posterPath
         )
         viewBinding.imageItem.setImageURI(pathImage)
-        val average = item.voteAverage!! * 10
+        val average = movieItem.voteAverage!! * 10
         viewBinding.userScore.text = "${average}%"
-        if (item.voteAverage!! == 0.0){
+        if (movieItem.voteAverage!! == 0.0) {
             viewBinding.userScore.text = "NR"
         }
 
-        if (item.adult!!){
-            viewBinding.adultText.text = viewBinding.root.context.getString(R.string.string_content_adult)
+        if (movieItem.adult!!) {
+            viewBinding.adultText.text =
+                viewBinding.root.context.getString(R.string.string_content_adult)
         }
     }
 

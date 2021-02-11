@@ -8,16 +8,17 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class PopularMovieLocalDataSource @Inject constructor(database: ConfigDatabase) {
+class MovieLocalDataSource @Inject constructor(database: ConfigDatabase) {
     companion object {
         private const val TAG = "PopularMovieLocalDataSo"
     }
 
     private val dao = database.popularMovieDao()
 
-    fun pagedListPopularMovies() = dao.selectMovies()
+    fun pagedListPopularMovies(type:String) = dao.selectMovies(type)
+    fun pagedListTopRateMovies(type:String) = dao.selectMovies(type)
 
-    fun savePopularMovies(vararg args: Movie) {
+    fun saveMovies(vararg args: Movie) {
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 dao.insert(*args)
