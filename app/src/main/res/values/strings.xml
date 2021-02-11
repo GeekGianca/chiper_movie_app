@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Chiper Movie App</string>
+    <string name="base_url">https://api.themoviedb.org</string>
+    <string name="url_image_display">https://www.themoviedb.org/t/p/w600_and_h900_bestv2</string>
+    <string name="string_youtube">https://youtu.be/</string>
+    <string name="database_name">movie_db</string>
+    <string name="api_key">a23699d98306b3f2402653d126c1fc22</string>
+
+    <string name="title_dashboard">Home</string>
+    <string name="title_coming_soon">Coming soon</string>
+    <string name="title_profile">Profile&amp;More</string>
+    <string name="string_title_series">Series</string>
+    <string name="string_title_movies">Movies</string>
+    <string name="string_title_favorites">My favorites</string>
+    <string name="string_my_list">My List</string>
+    <string name="string_detail">Detail</string>
+    <string name="string_trailer">Trailer</string>
+    <string name="string_failed_loading_genres">Failed to refresh data locally</string>
+    <string name="string_popular_movies">Popular movies</string>
+    <string name="string_content_adult">+18 Adult</string>
+</resources>
